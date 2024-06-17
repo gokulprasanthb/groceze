@@ -1,0 +1,101 @@
+[{
+    "name": "Milk",
+    "price": 56,
+    "description": "A nutrient-rich milk produced by cow, providing essential proteins, fats, vitamins, and minerals, widely consumed for its health benefits and culinary versatility.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/products/1.jpg"
+      },
+      {
+        "image": "/images/products/none.jpg"
+      }
+    ],
+    "category": "Dairy",
+    "seller": "Amazon",
+    "stock": 5
+  },
+  {
+    "name": "Bread",
+    "price": 40,
+    "description": "Made from refined wheat flour, often soft and light. Uses whole grain wheat flour, providing more fiber and nutrients.",
+    "ratings": 3.5,
+    "images": [
+      {
+        "image": "/images/products/2.jpg"
+      }
+    ],
+    "category": "Bakery",
+    "seller": "Flipkart",
+    "stock": 9
+  },
+  {
+    "name": "Coconut oil",
+    "price": 48,
+    "description": "Common white table sugar, often derived from sugar cane or sugar beets.",
+    "ratings": 2,
+    "images": [
+      {
+        "image": "/images/products/3.jpg"
+      }
+    ],
+    "category": "Pantry Staples",
+    "seller": "Ebay",
+    "stock": 9
+  },
+  {
+    "name": "Cookies",
+    "price": 83,
+    "description": "Classic cookies with chocolate chips mixed into the dough. often decorated with icing or sprinkles.",
+    "ratings": 4,
+    "images": [
+      {
+        "image": "/images/products/6.jpg"
+      }
+    ],
+    "category": "Snacks",
+    "seller": "Ebay",
+    "stock": 9
+  },
+  {
+    "name": "Laundry detergent",
+    "price": 116,
+    "description": "Dissolves easily in water, good for pre-treating stains and convenient for measuring. effective for heavy-duty cleaning and often more affordable.",
+    "ratings": 5,
+    "images": [
+      {
+        "image": "/images/products/7.jpg"
+      }
+    ],
+    "category": "Cleaning Supplies",
+    "seller": "Ebay",
+    "stock": 9
+  },
+  {
+    "name": "Shampoo",
+    "price": 99,
+    "description": "Contains active ingredients to treat scalp conditions like dandruff, psoriasis, or dermatitis.  Lacks harsh sulfates, making it gentler on hair and scalp, suitable for sensitive skin or color-treated hair.",
+    "ratings": 5,
+    "images": [
+      {
+        "image": "/images/products/4.jpg"
+      }
+    ],
+    "category": "Personal Care",
+    "seller": "Amazon",
+    "stock": 4
+  },
+  {
+    "name": "Tooth paste",
+    "price": 63,
+    "description": "Formulated with mild abrasives or bleaching agents to remove surface stains and whiten teeth  and kid-friendly flavors to encourage proper brushing habits in children.",
+    "ratings": 3,
+    "images": [
+      {
+        "image": "/images/products/5.jpg"
+      }
+    ],
+    "category": "Personal Care",
+    "seller": "Ebay",
+    "stock": 6
+  }]
