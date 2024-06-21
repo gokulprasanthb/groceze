@@ -1,9 +1,9 @@
 import React, { useState,  useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
-const ProductData = () => {
+const ProductData = ({cartItems,setCartItems}) => {
     const[product, setProduct] = useState(null)
-
+    const[quantity, setQuantity] = useState(1)
     const {id} = useParams()
 
     useEffect(() => {
@@ -11,6 +11,15 @@ const ProductData = () => {
         .then(res => res.json())
         .then(res => setProduct(res.product))
     },[])
+
+                //ADD TO CART FUNCTION IMPLEMENTATAION
+    function addToCart(){
+        const isItemExist = cartItems.find((item) => item.product._id == product._id)
+        if(!isItemExist){
+            const newItem = {product, quantity}
+            setCartItems((state) => [...state, newItem])
+        }
+    }
 
   return (
     product && <div className="flex flex-auto">
@@ -33,13 +42,14 @@ const ProductData = () => {
                 <hr/>
 
                 <p className='font-medium text-3xl'>${product.price}</p>
-                <div className="flex flex-row w-20 space-x-4">
+                <div className=" flex flex-row w-20 space-x-4">
                     <span className="btn btn-info minus">-</span>
-                    <input type="number" className="form-control count d-inline" value="1" readOnly />
+                    <input className='outline-none bg-slate-200 w-10 font-medium text-center' type="number" value={quantity} readOnly/>
+                    <input type="number" className="form-control count d-inline" value="3" readOnly />
                     <span className="btn btn-info plus">+</span>
                 </div>
 
-                <button type="button" id="cart_btn" className="btn btn-warning d-inline ">Add to Cart</button>
+                <button type="button" onClick={addToCart} id="cart_btn" className="btn btn-warning d-inline ">Add to Cart</button>
 
                 <hr/>
 
