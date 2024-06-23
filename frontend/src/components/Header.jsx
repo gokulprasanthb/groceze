@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../assets/grocelogo.png'
 import Search from './Search'
+import { Link } from 'react-router-dom'
 
 const Header = ({cartItems}) => {
   return (
@@ -19,7 +20,7 @@ const Header = ({cartItems}) => {
 
           <div className="mt-4 p-3 rounded-xl text-center font-semibold text-xl bg-amber-400">
             {/* <span id="cart" className="ml-3">Cart</span> */}
-            <span className="ml-1" id="cart_count">cart {cartItems.length}</span>
+            <Link to={"/cart"} ><span className="ml-1" id="cart_count">cart {cartItems.length}</span></Link>
           </div>
       </nav>
     </div>

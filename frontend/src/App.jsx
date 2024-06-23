@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import ProductData from './pages/ProductData'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Cart from './pages/Cart'
 
 const App = () => {
   const[cartItems, setCartItems] = useState([])
@@ -20,6 +21,7 @@ const App = () => {
               <Route path="/" element={<Home/>}/>
               <Route path="/search" element={<Home/>}/>
               <Route path="/product/:id" element={<ProductData cartItems={cartItems} setCartItems={setCartItems}/>}/>
+              <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>}/>
             </Routes>
           </div>
       </Router>
