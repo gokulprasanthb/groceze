@@ -1,7 +1,9 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
+import {toast} from 'react-toastify'
 
 const Cart = ({cartItems, setCartItems}) => {
+    const[done, setDone] = useState(false)
 
                     // increasing or decreasing the particular product
     function incrementQuantity(item){ 
@@ -40,6 +42,19 @@ const Cart = ({cartItems, setCartItems}) => {
         setCartItems(upadatedItems)
     }
 
+    function placeOrderHandler() {
+        fetch('http://localhost:8000/api/v1'+'/order', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(cartItems)
+        })
+        .then(() => { 
+            setCartItems([]); 
+            setDone(true);
+            toast.success("Order Done Successfully!")
+        })
+    }
+
   return (
     cartItems.length > 0 ?
     <Fragment>
@@ -52,11 +67,11 @@ const Cart = ({cartItems, setCartItems}) => {
                         (<Fragment>
                             <hr/>
                             <div className="flex space-x-8">
-                                        <div className="pr-4">
+                                        <div className="pr-4 mt-4">
                                             <img src={item.product.images[0].image} alt={item.product.name} className='h-360 w-40'/>
                                         </div>
 
-                                        <div className="w-72 ">
+                                        <div className="w-72 mt-5">
                                         <Link to={"/product/"+item.product._id}>{item.product.name}</Link>
                                         </div>
 
@@ -86,17 +101,21 @@ const Cart = ({cartItems, setCartItems}) => {
                 <div className='space-y-3 w-1/5 mt-10 pl-20'>
                     <h4><strong>Order Summary</strong></h4>
                     <hr />
-                    <p>Subtotal:  <span className="order-summary-values">1 (Units)</span></p>
-                    <p>Est. total: <span className="order-summary-values">$245.67</span></p>
+                    <p className='text-gray-700'>No Of products:  <span className='font-medium text-black'>{cartItems.reduce((acc,item) => (acc + item.quantity),0)} </span></p>
+                    <p className='text-gray-700'>Est. total: <span className='font-medium text-black'>${cartItems.reduce((acc,item) => (acc + item.product.price*item.quantity),0)}</span></p>
                     <hr />
 
-                    <button id="checkout_btn" className="btn btn-warning px-5 mt-4">Place Order</button>
+                    <button onClick={placeOrderHandler} id="checkout_btn" className="btn btn-warning px-5 mt-4">Place Order</button>
                 </div>
                 
             </div>
         </div>
     </Fragment>
-    : <h2 className='text-center pt-40 text-red-500 font-medium text-2xl'>oh! your cart is Empty.. grab something</h2>
+    : (!done ? <h2 className='text-center pt-40 text-red-500 font-medium text-2xl'>oh! your cart is Empty.. grab something</h2> : 
+    <div className='text-green-600 text-center space-y-5 text-xl'>
+        <h1 className='text-center pt-40 font-medium text-2xl'><strong>Order done!</strong></h1>
+        <p>your order had completed successfully...</p>
+    </div> )
   )
 }
 

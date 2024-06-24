@@ -20,7 +20,7 @@ const ProductData = ({cartItems,setCartItems}) => {
         if(!isItemExist){
             const newItem = {product, quantity}
             setCartItems((state) => [...state, newItem])
-            toast("You picked it successfully!!")
+            toast.info("product added to cart!")
         }
     }
 

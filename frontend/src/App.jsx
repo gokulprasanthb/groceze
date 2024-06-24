@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <Router>
           <div>
-            <ToastContainer theme='light' position='top-center'/>
+            <ToastContainer theme='dark' position='top-center'/>
             <Header cartItems={cartItems}/>
             <Routes>
               <Route path="/" element={<Home/>}/>

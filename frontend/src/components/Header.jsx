@@ -8,7 +8,7 @@ const Header = ({cartItems}) => {
     <div>
         <nav className="flex flex-row bg-green-500 p-2">
           <div className="flex flex-row">
-            <a href="/"><img className='w-40 m-3 ml-5' src={logo} alt="" /></a>
+            <a href="/"><img className='w-40 m-3 ml-5' src={logo} alt="logo"/></a>
               
     
           </div>
