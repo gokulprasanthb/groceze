@@ -58,7 +58,7 @@ const Cart = ({cartItems, setCartItems}) => {
   return (
     cartItems.length > 0 ?
     <Fragment>
-        <div className="flex flex-col space-y-5 text-xl ">
+        <div className="flex flex-col space-y-5 text-xl w-auto">
             <h2 className="mt-20 ml-96">Your Cart having: <b>{cartItems.length} items</b></h2>
             
             <div className="flex flex-auto space-x-10 ml-5">

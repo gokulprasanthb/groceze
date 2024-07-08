@@ -38,7 +38,7 @@ const ProductData = ({cartItems,setCartItems}) => {
     } 
 
   return (
-    product && <div className="flex flex-auto">
+    product && <div className="flex flex-auto w-auto">
         <div className="flex justify-center items-center">
             <div id="product_image" className='p-20 pr-20'>
             <img  src={product.images[0].image} alt="sdf" className='h-80 w-80'/>

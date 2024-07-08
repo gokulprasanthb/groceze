@@ -10,7 +10,7 @@ const Search = () => {
     }
 
   return (
-    <div className="input-group">
+    <div className="input-group max-md:mt-5 w-auto">
             <input
               type="text"
               id="search_field"
