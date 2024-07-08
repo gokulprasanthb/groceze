@@ -17,12 +17,12 @@ const Header = ({cartItems}) => {
                               {/* search bar */}
           <div className="col-12 col-md-6 mt-2 ml-20 flex flex-col"> 
             <Search/>
-            <ul className='flex font-medium gap-7 pt-3 text-lg max-md:hidden text-stone-700'>
-              <li><a className='hover:text-green-500 hover:no-underline duration-200' href="/">New Products</a></li>
-              <li><a className='hover:text-green-500 hover:no-underline duration-200' href="/">Vegetables</a></li>
-              <li><a className='hover:text-green-500 hover:no-underline duration-200' href="/">Diaries</a></li>
-              <li><a className='hover:text-green-500 hover:no-underline duration-200' href="/">bakery & Beverages</a></li>
-              <li><a className='hover:text-green-500 hover:no-underline duration-200' href="/">Household & Cleaning</a></li>
+            <ul className='flex font-medium gap-7 pt-3 text-lg max-md:hidden text-green-800'>
+              <li><a className='hover:text-orange-500 hover:no-underline duration-200' href="/">New Products</a></li>
+              <li><a className='hover:text-orange-500 hover:no-underline duration-200' href="/">Vegetables</a></li>
+              <li><a className='hover:text-orange-500 hover:no-underline duration-200' href="/">Diaries</a></li>
+              <li><a className='hover:text-orange-500 hover:no-underline duration-200' href="/">bakery & Beverages</a></li>
+              <li><a className='hover:text-orange-500 hover:no-underline duration-200' href="/">Household & Cleaning</a></li>
             </ul>
           </div>
 

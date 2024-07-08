@@ -12,10 +12,9 @@ const App = () => {
   const[cartItems, setCartItems] = useState([])
 
   return (
-    <div className='bg-gray-100'>
+    <div>
       <Router>
-          <div>
-            <ToastContainer theme='dark' position='top-center'/>
+          <ToastContainer theme='dark' position='top-center'/>
             <Header cartItems={cartItems}/>
             <Routes>
               <Route path="/" element={<Home/>}/>
@@ -23,7 +22,6 @@ const App = () => {
               <Route path="/product/:id" element={<ProductData cartItems={cartItems} setCartItems={setCartItems}/>}/>
               <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>}/>
             </Routes>
-          </div>
       </Router>
       <Footer/>
     </div>

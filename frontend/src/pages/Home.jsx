@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import { useSearchParams } from 'react-router-dom'
-
+import heroImg from '../assets/heroImage.jpg'
 
 
 const Home = () => {
@@ -16,13 +16,31 @@ const Home = () => {
 
   return (
     <Fragment>
-        <h1 id="products_heading" className='flex justify-center font-semibold text-2xl p-4 mt-5 w-auto'>Latest Products</h1>
+        <div className='flex flex-row px-20 pl-48  py-24 w-full pb-10'>
+            <div className='pt-6 w-1/2  mt-2 text-5xl space-y-5 text-green-700 max-md:w-full max-md:text-3xl max-md:text-center max-md:mt-16'>
+                <h1>Your One-Stop Shop for <br /><span className='text-orange-500'> Daily Essentials</span></h1>
+                <h3 className='text-3xl text-black'>Order fresh fruits, vegetables, and pantry staples with same-day delivery.</h3>
+                <div className='text-xl md:space-x-6 pt-8 max-md:flex max-md:flex-col max-md:items-center max-md:space-y-8'>
+                    <a href="#products" className='max-md:hidden px-7 py-3 duration-300 border-2 text-white bg-green-700 w-36 h-14 hover:bg-green-950 hover:text-white hover:green-800 rounded-sm max-md:ml-1 hover:no-underline'>Buy Now</a>
+                </div>
+            </div>
+            <div className='w-1/2 max-md:pl-2 md:pl-0 max-md:w-full'>
+                <img src={heroImg} alt="" className='h-full  w-full rounded-lg max-md:pl-6 max-md:pt-10 max-md:rounded-lg' />
+            </div>
+        </div>
 
-        <section id="products" className="container mt-5 text-xl w-auto">
+        <div id="products" className="container mt-10 pt-2 text-xl w-auto">
+            <h1 id="products" className='flex justify-center font-semibold text-2xl p-4 mt-12 w-auto'>Latest Products</h1>
             <div className="row">
                 {products.map(product => <ProductCard product={product}/>)}
             </div>
-        </section>              
+        </div>  
+
+        <div id="products" className="container mt-5 text-xl w-auto">
+            <div className="row">
+                {products.map(product => <ProductCard product={product}/>)}
+            </div>
+        </div>              
     </Fragment>
   )
 }
