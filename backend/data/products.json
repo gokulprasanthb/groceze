@@ -7,7 +7,7 @@
     "ratings": 4.5,
     "images": [
       {
-        "image": "/images/products/1.jpg"
+        "image": "/images/products/1.png"
       },
       {
         "image": "/images/products/none.jpg"
@@ -26,7 +26,7 @@
     "ratings": 3.5,
     "images": [
       {
-        "image": "/images/products/2.jpg"
+        "image": "/images/products/2.png"
       }
     ],
     "category": "Bakery",
@@ -42,7 +42,7 @@
     "ratings": 2,
     "images": [
       {
-        "image": "/images/products/3.jpg"
+        "image": "/images/products/3.png"
       }
     ],
     "category": "Pantry Staples",
@@ -58,7 +58,7 @@
     "ratings": 4,
     "images": [
       {
-        "image": "/images/products/6.jpg"
+        "image": "/images/products/6.png"
       }
     ],
     "category": "Snacks",
@@ -74,7 +74,7 @@
     "ratings": 5,
     "images": [
       {
-        "image": "/images/products/7.jpg"
+        "image": "/images/products/7.png"
       }
     ],
     "category": "Cleaning Supplies",
@@ -90,7 +90,7 @@
     "ratings": 5,
     "images": [
       {
-        "image": "/images/products/4.jpg"
+        "image": "/images/products/4.png"
       }
     ],
     "category": "Personal Care",
@@ -106,7 +106,7 @@
     "ratings": 3,
     "images": [
       {
-        "image": "/images/products/5.jpg"
+        "image": "/images/products/5.png"
       }
     ],
     "category": "Personal Care",
