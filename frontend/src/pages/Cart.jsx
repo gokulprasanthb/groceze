@@ -104,11 +104,11 @@ const Cart = ({cartItems, setCartItems}) => {
                 <div className='space-y-3 w-1/5 mt-10 pl-20'>
                     <h4><strong>Order Summary</strong></h4>
                     <hr />
-                    <p className='text-gray-700'>No Of products:<span className='font-bold text-black pl-2'>{cartItems.reduce((acc,item) => (acc + item.quantity),0)} </span></p>
-                    <p className='text-gray-700 flex'>Est. total:<span className='font-bold text-black flex pl-2'><FaIndianRupeeSign className='pt-1 mt-1' />{cartItems.reduce((acc,item) => (acc + item.product.price*item.quantity),0)}</span></p>
+                    <p className='text-red-500'>No Of products:<span className='font-bold text-black pl-2'>{cartItems.reduce((acc,item) => (acc + item.quantity),0)} </span></p>
+                    <p className='text-red-500 flex'>Est. total:<span className='font-bold text-black flex pl-2'><FaIndianRupeeSign className='pt-1 mt-1' />{cartItems.reduce((acc,item) => (acc + item.product.price*item.quantity),0)}</span></p>
                     <hr />
 
-                    <button onClick={placeOrderHandler} id="checkout_btn" className="btn btn-warning px-5 mt-4">Place Order</button>
+                    <button onClick={placeOrderHandler} id="checkout_btn" className="btn btn-success px-5 mt-4">Place Order</button>
                 </div>
                 
                 
