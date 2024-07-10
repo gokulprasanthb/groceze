@@ -12,7 +12,7 @@ const App = () => {
   const[cartItems, setCartItems] = useState([])
 
   return (
-    <div>
+    <div className='bg-slate-50'>
       <Router>
           <ToastContainer theme='dark' position='top-center'/>
             <Header cartItems={cartItems}/>

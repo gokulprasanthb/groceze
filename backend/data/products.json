@@ -1,6 +1,7 @@
 [{
     "name": "Milk",
     "price": 56,
+    "oldPrice" : "Rs.79",
     "description": "A nutrient-rich milk produced by cow, providing essential proteins, fats, vitamins, and minerals, widely consumed for its health benefits and culinary versatility.",
     "ratings": 4.5,
     "images": [
@@ -18,6 +19,7 @@
   {
     "name": "Bread",
     "price": 40,
+    "oldPrice" :"Rs.51",
     "description": "Made from refined wheat flour, often soft and light. Uses whole grain wheat flour, providing more fiber and nutrients.",
     "ratings": 3.5,
     "images": [
@@ -32,6 +34,7 @@
   {
     "name": "Coconut oil",
     "price": 48,
+    "oldPrice" : "Rs.61",
     "description": "Common white table sugar, often derived from sugar cane or sugar beets.",
     "ratings": 2,
     "images": [
@@ -46,6 +49,7 @@
   {
     "name": "Cookies",
     "price": 83,
+    "oldPrice" : "Rs.100",
     "description": "Classic cookies with chocolate chips mixed into the dough. often decorated with icing or sprinkles.",
     "ratings": 4,
     "images": [
@@ -60,6 +64,7 @@
   {
     "name": "Laundry detergent",
     "price": 116,
+    "oldPrice" :"Rs.134",
     "description": "Dissolves easily in water, good for pre-treating stains and convenient for measuring. effective for heavy-duty cleaning and often more affordable.",
     "ratings": 5,
     "images": [
@@ -74,6 +79,7 @@
   {
     "name": "Shampoo",
     "price": 99,
+    "oldPrice" : "Rs.114",
     "description": "Contains active ingredients to treat scalp conditions like dandruff, psoriasis, or dermatitis.  Lacks harsh sulfates, making it gentler on hair and scalp, suitable for sensitive skin or color-treated hair.",
     "ratings": 5,
     "images": [
@@ -87,7 +93,8 @@
   },
   {
     "name": "Tooth paste",
-    "price": 63,
+    "price": 40,
+    "oldPrice" : "Rs.55",
     "description": "Formulated with mild abrasives or bleaching agents to remove surface stains and whiten teeth  and kid-friendly flavors to encourage proper brushing habits in children.",
     "ratings": 3,
     "images": [
