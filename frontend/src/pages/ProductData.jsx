@@ -1,6 +1,8 @@
 import React, { useState,  useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import { toast } from 'react-toastify';
+import { FaIndianRupeeSign } from "react-icons/fa6";
+
 
 
 const ProductData = ({cartItems,setCartItems}) => {
@@ -39,15 +41,14 @@ const ProductData = ({cartItems,setCartItems}) => {
 
   return (
     product && <div className="flex flex-auto w-auto">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center md:pl-28 ">
             <div id="product_image" className='p-20 pr-20'>
-            <img  src={product.images[0].image} alt="sdf" className='h-80 w-80'/>
+                <img  src={product.images[0].image} alt="sdf" className='h-80 w-80'/>
             </div>
 
             <div className="w-2/4 mr-40 mt-10 space-y-5 ">
                 <div className='font-medium text-2xl'>
-                    <h1>{product.name}</h1>
-                    <p id="product_id">Product #{product._id}</p>
+                    <h1>{product.name2}</h1>
                 </div>
 
                 {/* <hr/>
@@ -56,13 +57,16 @@ const ProductData = ({cartItems,setCartItems}) => {
                 </div> */}
 
                 <hr/>
-
-                <p className='font-medium text-3xl'>${product.price}</p>
+                <div>
+                    <p>M.R.P <s className='text-red-600'>{product.oldPrice}</s></p>
+                    <p className='font-medium text-3xl flex text-green-700'><FaIndianRupeeSign className='pt-1 mt-1' />{product.price}</p>
+                 </div>
+    
                 <div className=" flex flex-row w-20 space-x-4">
                     
-                    <button onClick={decrementQuantity} className='bg-blue-300 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl hover:bg-cyan-600'>-</button>
+                    <button onClick={decrementQuantity} className='bg-cyan-400 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>-</button>
                     <input className='outline-none bg-slate-200 w-10 font-medium text-center' type="number" value={quantity} readOnly/>
-                    <button onClick={incrementQuantity} className='bg-blue-300 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl hover:bg-cyan-600'>+</button>
+                    <button onClick={incrementQuantity} className='bg-cyan-400 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>+</button>
                     
                 </div>
 
@@ -70,7 +74,7 @@ const ProductData = ({cartItems,setCartItems}) => {
 
                 <hr/>
 
-                <p>Status: <span className='font-bold'>{product.stock > 0 ?  "In Stock" : "Out of stock"}</span></p>
+                <p>Status: <span className='font-bold text-green-600'>{product.stock > 0 ?  "In Stock" : "Out of stock"}</span></p>
 
                 <hr/>
 

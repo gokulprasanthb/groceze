@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import { FaIndianRupeeSign } from "react-icons/fa6";
-import rupee from '../assets/rupee.svg'
 
 
 const ProductCard = ({product}) => {

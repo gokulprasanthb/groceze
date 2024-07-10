@@ -1,5 +1,6 @@
 [{
     "name": "Milk",
+    "name2": "Milk | fresh and delicious | Rich in nutrient",
     "price": 56,
     "oldPrice" : "Rs.79",
     "description": "A nutrient-rich milk produced by cow, providing essential proteins, fats, vitamins, and minerals, widely consumed for its health benefits and culinary versatility.",
@@ -13,11 +14,12 @@
       }
     ],
     "category": "Dairy",
-    "seller": "Amazon",
+    "seller": "ABT Foods Limited",
     "stock": 5
   },
   {
     "name": "Bread",
+    "name2": "Sliced Breads | soft to eat | Every bite is a delight",
     "price": 40,
     "oldPrice" :"Rs.51",
     "description": "Made from refined wheat flour, often soft and light. Uses whole grain wheat flour, providing more fiber and nutrients.",
@@ -28,11 +30,12 @@
       }
     ],
     "category": "Bakery",
-    "seller": "Flipkart",
+    "seller": "Royal Bakes",
     "stock": 9
   },
   {
     "name": "Coconut oil",
+    "name2": "Coconut oil | A Drops of Tropical Heaven",
     "price": 48,
     "oldPrice" : "Rs.61",
     "description": "Common white table sugar, often derived from sugar cane or sugar beets.",
@@ -43,11 +46,12 @@
       }
     ],
     "category": "Pantry Staples",
-    "seller": "Ebay",
+    "seller": "Parachute",
     "stock": 9
   },
   {
     "name": "Cookies",
+    "name2": "Baked Cookies | Making Every Day More Of A Treat",
     "price": 83,
     "oldPrice" : "Rs.100",
     "description": "Classic cookies with chocolate chips mixed into the dough. often decorated with icing or sprinkles.",
@@ -58,11 +62,12 @@
       }
     ],
     "category": "Snacks",
-    "seller": "Ebay",
+    "seller": "Elite",
     "stock": 9
   },
   {
     "name": "Laundry detergent",
+    "name2": "Liquid detergent | A Clean Start for Your Wardrobe",
     "price": 116,
     "oldPrice" :"Rs.134",
     "description": "Dissolves easily in water, good for pre-treating stains and convenient for measuring. effective for heavy-duty cleaning and often more affordable.",
@@ -73,11 +78,12 @@
       }
     ],
     "category": "Cleaning Supplies",
-    "seller": "Ebay",
+    "seller": "Tide",
     "stock": 9
   },
   {
     "name": "Shampoo",
+    "name2": "Hair shampoo | Making your hair silky smooth",
     "price": 99,
     "oldPrice" : "Rs.114",
     "description": "Contains active ingredients to treat scalp conditions like dandruff, psoriasis, or dermatitis.  Lacks harsh sulfates, making it gentler on hair and scalp, suitable for sensitive skin or color-treated hair.",
@@ -88,11 +94,12 @@
       }
     ],
     "category": "Personal Care",
-    "seller": "Amazon",
+    "seller": "Induleka",
     "stock": 4
   },
   {
     "name": "Tooth paste",
+    "name2": "Tooth paste | Keep your teeth strong and healthy.",
     "price": 40,
     "oldPrice" : "Rs.55",
     "description": "Formulated with mild abrasives or bleaching agents to remove surface stains and whiten teeth  and kid-friendly flavors to encourage proper brushing habits in children.",
@@ -103,6 +110,6 @@
       }
     ],
     "category": "Personal Care",
-    "seller": "Ebay",
+    "seller": "Colgate",
     "stock": 6
   }]
