@@ -64,9 +64,9 @@ const ProductData = ({cartItems,setCartItems}) => {
     
                 <div className=" flex flex-row w-20 space-x-4">
                     
-                    <button onClick={decrementQuantity} className='bg-cyan-400 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>-</button>
+                    <button onClick={decrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>-</button>
                     <input className='outline-none bg-slate-200 w-10 font-medium text-center' type="number" value={quantity} readOnly/>
-                    <button onClick={incrementQuantity} className='bg-cyan-400 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>+</button>
+                    <button onClick={incrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-xl'>+</button>
                     
                 </div>
 
@@ -74,7 +74,7 @@ const ProductData = ({cartItems,setCartItems}) => {
 
                 <hr/>
 
-                <p>Status: <span className='font-bold text-green-600'>{product.stock > 0 ?  "In Stock" : "Out of stock"}</span></p>
+                <p>Status: <span className='font-bold'>{product.stock > 0 ?  "In Stock" : "Out of stock"}</span></p>
 
                 <hr/>
 
