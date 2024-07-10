@@ -11,7 +11,7 @@ const Header = ({cartItems}) => {
     <div className='w-auto'>
         <nav className="flex flex-row md:bg-stone-50 shadow-md p-2 w-auto">
           <div className="flex flex-row">
-            <a href="/"><img className='w-56 -20 m-3 ml-5 p-0' src={logo} alt="logo"/></a>
+            <a href="/"><img className='w-56 h-20 m-3 ml-5 p-0' src={logo} alt="logo"/></a>
           </div>
 
                               {/* search bar */}

@@ -118,7 +118,7 @@ const Cart = ({cartItems, setCartItems}) => {
     : (!done ? 
             <div className='flex flex-col text-center justify-center md:w-3/4 md:ml-44 md:my-20 md:mt-30'>
                 <img className='flex w-96 h-96 mx-96' src={emptyImg} alt="" />
-                <h2 className='text-center pt-10 text-red-600 font-medium text-2xl'>Oh! your cart is Empty.. grab something</h2>
+                <h2 className='text-center pt-10 text-black font-medium text-2xl'>Oh! your cart is Empty.. grab something</h2>
             </div>
                 : 
             <div className='text-green-600 text-center space-y-5 text-xl'>
