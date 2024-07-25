@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className='bg-slate-50'>
       <Router>
-          <ToastContainer theme='dark' position='top-center'/>
+          <ToastContainer theme='dark' position='top-center'/> 
             <Header cartItems={cartItems}/>
             <Routes>
               <Route path="/" element={<Home/>}/>

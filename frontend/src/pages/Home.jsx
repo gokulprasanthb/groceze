@@ -29,10 +29,11 @@ const Home = () => {
             </div>
         </div>
 
+        {/*  SHOWING PRODUCTCARD  */}
         <div id="products" className="container mt-1 pt-0 text-xl w-auto">
             <h1 id="products" className='flex justify-center font-semibold text-3xl p-4 mt-12 w-auto text-black text-start border-b-2 border-green-300'>Latest Products</h1>
-            <div className="pt-10 flex flex-row px-20 w-auto flex-wrap ">
-                {products.map(product => <ProductCard product={product}/>)}
+            <div className="pt-10 flex flex-row px-20 w-auto flex-wrap "> 
+                {products.map(product => <ProductCard product={product}/>)} 
             </div>
         </div>              
     </Fragment>

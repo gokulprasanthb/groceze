@@ -6,7 +6,7 @@ import emptyImg from '../assets/empty.png'
 
 
 const Cart = ({cartItems, setCartItems}) => {
-    const[done, setDone] = useState(false)
+    const[done, setDone] = useState(false) //THIS IS FOR SHOWING SUCCESS MESSAGE
 
                     // increasing or decreasing the particular product
     function incrementQuantity(item){ 
@@ -35,8 +35,6 @@ const Cart = ({cartItems, setCartItems}) => {
     } 
 
     function removeCartItem(item) {
-        
-
         const upadatedItems = cartItems.filter((i) =>{
             if(i.product._id !== item.product._id){
                return true;
@@ -69,13 +67,13 @@ const Cart = ({cartItems, setCartItems}) => {
                     {cartItems.map((item) => 
                         (<Fragment>
                             
-                            <div className="flex space-x-8 py-2 my-2 h-40 border-t-2 border-green-500 ">
+                            <div className="flex space-x-8 py-2 my-2 h-40 border-b-2 border-green-500 ">
                                         <div className="pr-4 mt-2">
                                             <img src={item.product.images[0].image} alt={item.product.name} className='h-360 w-40'/>
                                         </div>
 
                                         <div className="w-72 mt-16 flex justify-center">
-                                        <Link to={"/product/"+item.product._id}>{item.product.name}</Link>
+                                            <Link className='hover:font-bold hover:text-black' to={"/product/"+item.product._id}>{item.product.name}</Link>
                                         </div>
 
 
@@ -100,7 +98,7 @@ const Cart = ({cartItems, setCartItems}) => {
                     
                 </div>
 
-                
+                            {/* ORDER SUMMARY */}
                 <div className='space-y-3 w-1/5 mt-10 pl-20'>
                     <h4><strong>Order Summary</strong></h4>
                     <hr />

@@ -17,6 +17,7 @@ const ProductData = ({cartItems,setCartItems}) => {
     },[])
 
                 //ADD TO CART FUNCTION IMPLEMENTATAION
+                //adding to cart only when it doesn't exists 
     function addToCart(){
         const isItemExist = cartItems.find((item) => item.product._id == product._id)
         if(!isItemExist){
@@ -62,31 +63,22 @@ const ProductData = ({cartItems,setCartItems}) => {
                     <p className='font-medium text-3xl flex text-green-700'><FaIndianRupeeSign className='pt-1 mt-1' />{product.price}</p>
                  </div>
     
-                <div className=" flex flex-row w-20 space-x-4">
-                    
-                    <button onClick={decrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>-</button>
+                <div className=" flex flex-row w-20 space-x-4">                    
+                    <button disabled={product.stock == 0} onClick={decrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>-</button>
                     <input className='outline-none bg-slate-200 w-10 font-medium text-center' type="number" value={quantity} readOnly/>
-                    <button onClick={incrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-xl'>+</button>
-                    
+                    <button disabled={product.stock == 0} onClick={incrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-xl'>+</button>     
                 </div>
 
                 <button type="button" onClick={addToCart} disabled={product.stock == 0} id="cart_btn" className="btn btn-warning d-inline ">Add to Cart</button>
-
+               
                 <hr/>
-
                 <p>Status: <span className='font-bold'>{product.stock > 0 ?  "In Stock" : "Out of stock"}</span></p>
-
                 <hr/>
-
                 <h4> <strong>Description: </strong></h4>
                 <p>{product.description}</p>
                 <hr/>
-                <p id="product_seller mb-3">Sold by: <strong>{product.seller}</strong></p>
-				
-                <div className="rating w-50"></div>
-						
+                <p id="product_seller mb-3">Sold by: <strong>{product.seller}</strong></p>					
             </div>
-
         </div>
 
     </div>
