@@ -16,7 +16,7 @@ const Header = ({cartItems}) => {
 
                               {/* search bar */}
           <div className="col-12 col-md-6 mt-2 ml-20 flex flex-col"> 
-            <Search/> 
+             
 
                 {/* PRODUCT CATEGORY NAVIGATION */}
             <ul className='flex font-medium gap-7 pt-3 text-lg max-md:hidden text-black'>
@@ -30,7 +30,7 @@ const Header = ({cartItems}) => {
 
             {/* CART COUNT */}
           <div className='flex md:px-32 md:py-6 py-4 text-black'>
-            <Link id="cart_count" className='pt-2 pl-1 text-lg font-bold flex hover:no-underline hover:text-black' to={"/cart"} ><img className='w-10 h-10' src={trolley} alt="" /><span className='p-2'>{cartItems.length}</span></Link>
+            <Link id="cart_count" className='pt-2 pl-1 text-lg font-bold flex hover:no-underline hover:text-black' to={"/cart"} ><img className='w-10 h-10' src={trolley} alt="trolleyImage" /><span className='p-2'>{cartItems.length}</span></Link>
           </div>
 
           <a href="/"><img className='w-10 h-10 mt-[30px]  max-md:hidden' src={login} alt="" /></a>

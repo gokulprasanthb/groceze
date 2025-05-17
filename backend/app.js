@@ -15,12 +15,10 @@ const products = require('./routes/product');
 const orders = require('./routes/order');
 
 letsConnectDatabase();
-
-                        
-        //addinng prefixes before routes
-
+       
 app.use(express.json())      //this middleware is to return the data in a json formmat
 app.use(cors()) //this middleware is for setting responce headera - ACCESS CONTROL ALLOW ORIGIN
+        //addinng prefixes before routes  
 app.use('/api/v1', products)
 app.use('/api/v1', orders)
 

@@ -3,19 +3,17 @@ import {useParams} from 'react-router-dom'
 import { toast } from 'react-toastify';
 import { FaIndianRupeeSign } from "react-icons/fa6";
 
-
-
 const ProductData = ({cartItems,setCartItems}) => {
     const[product, setProduct] = useState(null)
     const[quantity, setQuantity] = useState(1)
-    const {id} = useParams()
+    const {id} = useParams();
 
     useEffect(() => {
         fetch('http://localhost:8000/api/v1' + '/products/' + id)
         .then(res => res.json())
         .then(res => setProduct(res.product))
     },[])
-
+  
                 //ADD TO CART FUNCTION IMPLEMENTATAION
                 //adding to cart only when it doesn't exists 
     function addToCart(){
@@ -51,26 +49,17 @@ const ProductData = ({cartItems,setCartItems}) => {
                 <div className='font-medium text-2xl'>
                     <h1>{product.name2}</h1>
                 </div>
-
-                {/* <hr/>
-                <div className="rating-outer">
-                    <div className="rating-inner"></div>
-                </div> */}
-
                 <hr/>
                 <div>
                     <p>M.R.P <s className='text-red-600'>{product.oldPrice}</s></p>
                     <p className='font-medium text-3xl flex text-green-700'><FaIndianRupeeSign className='pt-1 mt-1' />{product.price}</p>
                  </div>
-    
                 <div className=" flex flex-row w-20 space-x-4">                    
                     <button disabled={product.stock == 0} onClick={decrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-2xl'>-</button>
                     <input className='outline-none bg-slate-200 w-10 font-medium text-center' type="number" value={quantity} readOnly/>
                     <button disabled={product.stock == 0} onClick={incrementQuantity} className='bg-cyan-500 outline-none h-10 w-20 px-2 rounded-lg text-center font-bold text-xl'>+</button>     
                 </div>
-
                 <button type="button" onClick={addToCart} disabled={product.stock == 0} id="cart_btn" className="btn btn-warning d-inline ">Add to Cart</button>
-               
                 <hr/>
                 <p>Status: <span className='font-bold'>{product.stock > 0 ?  "In Stock" : "Out of stock"}</span></p>
                 <hr/>
