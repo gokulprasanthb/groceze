@@ -9,8 +9,9 @@ const Home = () => {
     const [products, setproducts] = useState([])
     const [searchParams, setSearchParams] = useSearchParams()
 
-    useEffect(() => {
-        fetch('http://localhost:8000/api/v1' + '/products?' + searchParams)
+    // "http://localhost:8000/api/v1"
+    useEffect(() => {   
+        fetch('https://grocezebackend.vercel.app/' + '/products?' + searchParams)
             .then(res => res.json())
             .then(res => setproducts(res.products))
     }, [searchParams])

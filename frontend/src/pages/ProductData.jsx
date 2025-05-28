@@ -8,8 +8,10 @@ const ProductData = ({cartItems,setCartItems}) => {
     const[quantity, setQuantity] = useState(1)
     const {id} = useParams();
 
-    useEffect(() => {
-        fetch('http://localhost:8000/api/v1' + '/products/' + id)
+
+    // "http://localhost:8000/api/v1"
+    useEffect(() => {  
+        fetch('https://grocezebackend.vercel.app/' + '/products/' + id)
         .then(res => res.json())
         .then(res => setProduct(res.product))
     },[])
