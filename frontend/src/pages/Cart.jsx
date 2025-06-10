@@ -46,7 +46,7 @@ const Cart = ({ cartItems, setCartItems }) => {
     //
     // "http://localhost:8000/api/v1"   
     function placeOrderHandler() {   
-        fetch('https://grocezebackend.vercel.app' + '/order', {
+        fetch('https://grocezebackend.vercel.app/' + '/order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(cartItems)
